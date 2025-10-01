@@ -31,7 +31,7 @@ function NavBar() {
       <ul>
         <li onClick={() => handleNav('https://senteroid.vercel.app/')}>HOME</li>
         <li onClick={() => handleNav('https://senteroid.vercel.app/earth')}>EARTH</li>
-        <li onClick={() => handleNav('https://senteroid.vercel.app/simulate')}>SIMULATE</li>
+        <li onClick={() => handleNav('https://senteroid.vercel.app/simulation')}>SIMULATE</li>
         <li onClick={() => handleNav('https://senteroid.vercel.app/fact')}>FACT</li>
         <li onClick={() => handleNav('/storymode')}>STORYMODE</li>
         <li onClick={() => handleNav('https://senteroid.vercel.app/learn')}>LEARN</li>
