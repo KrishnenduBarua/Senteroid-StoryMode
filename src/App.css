@@ -1,0 +1,915 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    z-index: -1;
+    pointer-events: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000; /* Highest z-index */
+
+}
+
+.page-name {
+    font-family: 'Bungee', cursive;
+    font-size: 25px;
+    color: white;
+    margin-right: auto;
+    margin-left: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+    
+}
+
+nav ul li {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+nav ul li:active {
+    transform: translateY(0px) scale(0.95);
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+::-webkit-scrollbar { display: none; }
+
+.main-content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+   
+}
+.title{
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+  letter-spacing: 5px;
+  
+}
+.description {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+.explore-button{
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: #090235;
+    border: 1px solid white;
+    border-radius: 15px;
+    cursor: pointer; 
+}
+.explore-button:hover {
+    background-color: rgb(0, 0, 38);
+}
+.explore-button:active {
+    transform: translateY(0px) scale(0.95);
+    background-color: rgba(11, 7, 45, 0.2);
+    text-shadow: 0 0 15px rgba(14, 13, 39, 0.8);
+}
+.learn-more {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.learn-more button {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learn-more button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile Responsive Styles */
+
+
+@media screen and (max-width: 1024px) {
+    .page-name {
+        font-size: 22px;
+        margin-left: 30px;
+    }
+    
+    nav ul {
+        gap: 50px;
+    }
+    
+    nav ul li {
+        font-size: 18px;
+    }
+    
+    .title {
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+    
+    .description {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+    
+    .explore-button {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    nav {
+        width: 95%;
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .page-name {
+        font-size: 20px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    nav ul li {
+        font-size: 16px;
+    }
+    
+    .main-content {
+        padding: 0 20px;
+        top: 60%;
+    }
+    
+    .title {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+    
+    .description {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-top: 20px;
+    }
+    
+    .explore-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-top: 25px;
+    }
+    
+    .learn-more {
+        bottom: 30px;
+    }
+    
+    .learn-more button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 10px 5px;
+    }
+    
+    .page-name {
+        font-size: 18px;
+    }
+    
+    nav ul {
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        font-size: 14px;
+    }
+    
+    .main-content {
+        padding: 0 15px;
+        top: 65%;
+    }
+    
+    .title {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    
+    .description {
+        font-size: 14px;
+        padding: 8px 12px;
+        margin-top: 15px;
+    }
+    
+    .explore-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 20px;
+    }
+    
+    .learn-more {
+        bottom: 20px;
+    }
+    
+    .learn-more button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .page-name {
+        font-size: 16px;
+    }
+    
+    nav ul li {
+        font-size: 12px;
+    }
+    
+    .title {
+        font-size: 18px;
+    }
+    
+    .description {
+        font-size: 12px;
+    }
+    
+    .explore-button {
+        font-size: 12px;
+    }
+}
+
+/* Scene1 Cinematic Styles */
+.scene1-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    z-index: 5;
+}
+
+.earth-background {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 90px);
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.earth-background lottie-player {
+    width: 100vw !important;
+    height: 100% !important;
+    min-width: 117vw;
+    min-height: 110%;
+    object-fit: cover;
+}
+
+.meteor-container {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    z-index: 3;
+}
+
+.meteor-gif {
+    width: auto;
+    height: 150px;
+    max-width: 270px;
+    opacity: 0.8;
+    object-fit: contain;
+}
+
+.cinematic-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 90%;
+    max-width: 800px;
+}
+
+.cinematic-text {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 3s ease-in-out;
+}
+
+.cinematic-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cinematic-text.date-text {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ff6b35;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.cinematic-text:not(.date-text) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.scene1-button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(255, 107, 53, 0.8);
+    border: 2px solid rgba(255, 107, 53, 1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.scene1-button:hover {
+    background-color: rgba(255, 107, 53, 1);
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.scene1-button:active {
+    transform: translateY(0px) scale(0.98);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness for Scene1 */
+@media screen and (max-width: 768px) {
+    .meteor-gif {
+        width: auto;
+        height: 80px;
+        max-width: 120px;
+    }
+    
+    .cinematic-text.date-text {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    
+    .cinematic-text:not(.date-text) {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .meteor-container {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .meteor-gif {
+        width: auto;
+        height: 60px;
+        max-width: 80px;
+    }
+    
+    .cinematic-text.date-text {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    
+    .cinematic-text:not(.date-text) {
+        font-size: 16px;
+    }
+}
+
+/* Scene2 Styles - Updated to match Scene1 container */
+.scene2-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  z-index: 5;
+}
+
+.flapmap-background {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 90px);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.flapmap-image {
+  width: 100vw !important;
+  height: 100% !important;
+  min-width: 100vw;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.scene2-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 2;
+  width: 90%;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 2px solid #1d7845;
+}
+
+.scene2-text {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #00ff00;
+  text-shadow: 0 0 10px rgb(32, 125, 127);
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 2s ease-in-out;
+  line-height: 1.4;
+}
+
+.scene2-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scene2-text.countdown-text {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ff4444;
+  text-shadow: 0 0 15px rgba(255, 68, 68, 0.8);
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+.scene2-button {
+  background: linear-gradient(135deg, #00ff00, #00cc00);
+  border: none;
+  padding: 15px 30px;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(246, 241, 241);
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 40px;
+  text-shadow: none;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+.scene2-button:hover {
+  background: linear-gradient(135deg, #00ff44, #00dd00);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 255, 0, 0.5);
+}
+
+.scene2-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Mobile Responsive for Scene2 */
+@media screen and (max-width: 768px) {
+  .scene2-text-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+  
+  .scene2-text {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .scene2-text.countdown-text {
+    font-size: 26px;
+  }
+  
+  .scene2-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+/* ...existing code... */
+
+/* Scene3 Styles */
+.scene3-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  z-index: 5;
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.starry-background {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 90px);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.scene3-content {
+  position: relative;
+  z-index: 2;
+  height: calc(100vh - 90px);
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.scene3-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  margin-bottom: 40px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.strategy-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.strategy-cards-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.strategy-card {
+  background: #041e46;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardSlideIn 0.8s ease-out forwards;
+}
+
+.strategy-card:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.strategy-gif-container {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.strategy-heading {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.strategy-description {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #cccccc;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.strategy-button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  border: none;
+  padding: 12px 24px;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.strategy-button:hover {
+  background: linear-gradient(135deg, #5CBF60, #4CAF50);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.strategy-button:active {
+  transform: translateY(0);
+}
+
+@keyframes cardSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive for Scene3 */
+@media screen and (max-width: 1024px) {
+  .strategy-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .strategy-card {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .scene3-title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scene3-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .strategy-card {
+    padding: 15px;
+  }
+  
+  .strategy-heading {
+    font-size: 20px;
+  }
+  
+  .strategy-description {
+    font-size: 13px;
+  }
+  
+  .strategy-gif-container {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .scene3-title {
+    font-size: 20px;
+  }
+  
+  .strategy-card {
+    width: 95%;
+    padding: 12px;
+  }
+  
+  .strategy-heading {
+    font-size: 18px;
+  }
+  
+  .strategy-description {
+    font-size: 12px;
+  }
+  
+  .strategy-gif-container {
+    height: 100px;
+  }
+}
+
+/* Animation Scenes - Full Screen Like Other Scenes */
+.deflection-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5; /* Below navbar */
+  background: #000;
+}
+
+/* Earth Background Animation - Full Screen */
+.earth-animation-background {
+  position: absolute;
+  top: 90px; /* Start below navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  z-index: 1;
+}
+
+/* Space Overlay - Positioned below navbar */
+.space-overlay {
+  position: absolute;
+  top: 90px; /* Start below navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  background: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.4), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  z-index: 2;
+  pointer-events: none;
+  animation: starTwinkle 6s ease-in-out infinite alternate;
+}
+
+/* Trajectory SVG - Positioned below navbar */
+.trajectory-svg {
+  position: absolute;
+  top: 90px; /* Start below navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* All spacecraft and asteroids - Adjust positioning */
+.kinetic-spacecraft,
+.gravity-spacecraft,
+.nuclear-spacecraft,
+.detailed-asteroid {
+  position: absolute;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  /* Positions will be calculated relative to the viewport minus navbar */
+}
+
+/* Impact effects and other elements */
+.kinetic-impact,
+.nuclear-detonation,
+.advanced-gravity-field,
+.asteroid-debris-field {
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+}
+
+/* Animation Text Overlay - Position at bottom but above navbar */
+.animation-text-overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10; /* Below navbar but above other elements */
+  animation: fadeInUp 1s ease-out;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    /* Adjust for mobile navbar height */
+    .earth-animation-background,
+    .space-overlay,
+    .trajectory-svg {
+        top: 120px;
+        height: calc(100vh - 120px);
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
